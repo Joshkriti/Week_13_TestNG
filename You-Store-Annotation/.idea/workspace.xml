@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="124d3604-7110-460d-b548-784c06ca7836" name="Changes" comment="First push">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/yourstore/annotation/resources/propertiesfiles/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/yourstore/annotation/resources/propertiesfiles/log4j2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/yourstore/annotation/testbase/TestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/yourstore/annotation/testsuite/DesktopsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/yourstore/annotation/testsuite/TopMenuTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yourstore/annotation/propertyreader/PropertyReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yourstore/annotation/propertyreader/PropertyReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yourstore/annotation/utility/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yourstore/annotation/utility/Utility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cv-library-uk/src/test/java/uk/co/library/testbase/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cv-library-uk/src/test/java/uk/co/library/testbase/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/yourstore/annotation/resources/propertiesfiles/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/yourstore/annotation/resources/propertiesfiles/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +23,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2hBX1lXVgVieOSK88Zxaw7lzNa3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -48,6 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.DesktopsTest.verifyProductAddedToShoppingCartSuccessFully.executor": "Run",
     "TestNG.DesktopsTest.verifyProductArrangeInAlphaBaticalOrder.executor": "Run",
     "TestNG.TopMenuTest.executor": "Run",
     "TestNG.TopMenuTest.verifyUserShouldNavigateToDesktopsPageSuccessfully.executor": "Run",
@@ -69,6 +59,24 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.DesktopsTest.verifyProductArrangeInAlphaBaticalOrder">
+    <configuration name="DesktopsTest.verifyProductAddedToShoppingCartSuccessFully" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="You-Store-Annotation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="yourstore.annotation.testsuite.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="yourstore.annotation.testsuite" />
+      <option name="MAIN_CLASS_NAME" value="yourstore.annotation.testsuite.DesktopsTest" />
+      <option name="METHOD_NAME" value="verifyProductAddedToShoppingCartSuccessFully" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DesktopsTest.verifyProductArrangeInAlphaBaticalOrder" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="You-Store-Annotation" />
       <extension name="coverage">
@@ -125,8 +133,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.DesktopsTest.verifyProductArrangeInAlphaBaticalOrder" />
-        <item itemvalue="TestNG.TopMenuTest" />
         <item itemvalue="TestNG.TopMenuTest.verifyUserShouldNavigateToDesktopsPageSuccessfully" />
+        <item itemvalue="TestNG.DesktopsTest.verifyProductAddedToShoppingCartSuccessFully" />
+        <item itemvalue="TestNG.TopMenuTest" />
       </list>
     </recent_temporary>
   </component>
