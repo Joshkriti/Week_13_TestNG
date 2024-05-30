@@ -1,9 +1,12 @@
 package uk.co.library.testsuite;
 
-import uk.co.library.utility.Utility;
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+import uk.co.library.testbase.TestBase;
 
-public class JobSearchTest extends Utility {
+public class JobSearchTest extends TestBase {
 
+    @Test
     public void verifyJobSearchResultUsingDifferentDataSet(
             String jobTitle,
             String location,
@@ -13,6 +16,8 @@ public class JobSearchTest extends Utility {
             String salaryType,
             String jobType,
             String result){
+
+        driver.findElement(By.className("form__input")).sendKeys("Tester");
 
     }
 }

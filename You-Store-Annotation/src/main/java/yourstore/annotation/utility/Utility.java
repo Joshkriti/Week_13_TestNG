@@ -19,6 +19,7 @@ public class Utility extends ManageDriver {
         loginLink.click();
     }
 
+
     public void selectByVisibleTextFromDropDown(By by, String text) {
         WebElement dropDown = driver.findElement(by);
         Select select = new Select(dropDown);

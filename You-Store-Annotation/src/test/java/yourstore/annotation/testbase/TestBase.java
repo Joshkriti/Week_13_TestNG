@@ -1,11 +1,12 @@
-package uk.co.library.testbase;
+package yourstore.annotation.testbase;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import uk.co.library.propertyreader.PropertyReader;
-import uk.co.library.utility.Utility;
+import yourstore.annotation.propertyreader.PropertyReader;
+import yourstore.annotation.utility.Utility;
 
 public class TestBase extends Utility {
+
     public String browser = PropertyReader.getInstance().getProperty("browser");
 
     @BeforeMethod(alwaysRun = true)
@@ -18,5 +19,4 @@ public class TestBase extends Utility {
         closeBrowser();
     }
 }
-
 
