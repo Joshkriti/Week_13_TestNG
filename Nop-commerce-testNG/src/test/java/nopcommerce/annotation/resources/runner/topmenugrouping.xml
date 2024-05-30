@@ -8,7 +8,7 @@
             </run>
         </groups>
         <classes>
-            <class name="nop.commerce.testsuite.TopMenuTest"/>
+            <class name="nopcommerce.annotation.testsuite.TopMenuTest"/>
         </classes>
     </test>
 </suite>

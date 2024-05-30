@@ -21,7 +21,7 @@ public class PropertyReader {
         Properties prop = new Properties();
         FileInputStream inputStream = null;
         try {
-            inputStream = new FileInputStream(System.getProperty("user.dir") + "/src/test/java/nop/commerce/resources/propertiesfiles/config.properties");
+            inputStream = new FileInputStream(System.getProperty("user.dir") + "/src/test/java/nopcommerce/annotation/resources/propertiesfiles/config.properties");
             prop.load(inputStream);
             if (prop.getProperty(propertyName) != null) {
                 return prop.getProperty(propertyName);

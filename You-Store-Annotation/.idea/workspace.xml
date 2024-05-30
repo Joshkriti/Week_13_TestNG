@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="124d3604-7110-460d-b548-784c06ca7836" name="Changes" comment="First push">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/yourstore/annotation/resources/propertiesfiles/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/yourstore/annotation/resources/propertiesfiles/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cv-library-uk/src/test/java/uk/co/library/testsuite/JobSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cv-library-uk/src/test/java/uk/co/library/testsuite/JobSearchTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,25 +30,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TestNG.DesktopsTest.verifyProductAddedToShoppingCartSuccessFully.executor": "Run",
-    "TestNG.DesktopsTest.verifyProductArrangeInAlphaBaticalOrder.executor": "Run",
-    "TestNG.TopMenuTest.executor": "Run",
-    "TestNG.TopMenuTest.verifyUserShouldNavigateToDesktopsPageSuccessfully.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Komal/Selenium Homework/Week12_com-nopCommerce/com-tutorialsninja",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TestNG.DesktopsTest.verifyProductAddedToShoppingCartSuccessFully.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.DesktopsTest.verifyProductArrangeInAlphaBaticalOrder.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TopMenuTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TopMenuTest.verifyUserShouldNavigateToDesktopsPageSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Komal/Selenium Homework/Week12_com-nopCommerce/com-tutorialsninja&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Komal\Week_13_TestNG\You-Store-Annotation\src\test\java\yourstore\annotation" />
@@ -58,7 +57,7 @@
       <recent name="yourstore.annotation.testsuite" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DesktopsTest.verifyProductArrangeInAlphaBaticalOrder">
+  <component name="RunManager" selected="TestNG.TopMenuTest.verifyUserShouldNavigateToDesktopsPageSuccessfully">
     <configuration name="DesktopsTest.verifyProductAddedToShoppingCartSuccessFully" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="You-Store-Annotation" />
       <extension name="coverage">
@@ -132,8 +131,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DesktopsTest.verifyProductArrangeInAlphaBaticalOrder" />
         <item itemvalue="TestNG.TopMenuTest.verifyUserShouldNavigateToDesktopsPageSuccessfully" />
+        <item itemvalue="TestNG.DesktopsTest.verifyProductArrangeInAlphaBaticalOrder" />
         <item itemvalue="TestNG.DesktopsTest.verifyProductAddedToShoppingCartSuccessFully" />
         <item itemvalue="TestNG.TopMenuTest" />
       </list>

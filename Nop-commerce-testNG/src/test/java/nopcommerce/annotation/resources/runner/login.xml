@@ -3,7 +3,7 @@
 <suite name="Suite1" verbose="1">
     <test name="demonopcommerce">
         <classes>
-            <class name="nop.commerce.testsuite.Login_Register_Page"/>
+            <class name="nopcommerce.annotation.testsuite.Login_Register_Page"/>
         </classes>
     </test>
 </suite>

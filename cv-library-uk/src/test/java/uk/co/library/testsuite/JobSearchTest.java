@@ -6,7 +6,6 @@ import uk.co.library.testbase.TestBase;
 
 public class JobSearchTest extends TestBase {
 
-    @Test
     public void verifyJobSearchResultUsingDifferentDataSet(
             String jobTitle,
             String location,
@@ -15,9 +14,22 @@ public class JobSearchTest extends TestBase {
             String salaryMax,
             String salaryType,
             String jobType,
-            String result){
+            String result) {
 
-        driver.findElement(By.className("form__input")).sendKeys("Tester");
+        clickOnElement(By.xpath("//input[@class='form__input']"));
+
 
     }
+
+    public void jobTitle(String jobTitle) {
+        clickOnElement(By.xpath("//input[@class='form__input']"));
+    }
+
+    @Test
+    public void verifyJobSearchResult() {
+        jobTitle("Tester");
+        driver.findElement(By.xpath("//input[@class='form__input']")).sendKeys("Tester");
+    }
 }
+
+
