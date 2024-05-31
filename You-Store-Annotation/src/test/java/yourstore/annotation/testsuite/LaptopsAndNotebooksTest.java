@@ -4,16 +4,11 @@ import junit.framework.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import yourstore.annotation.testbase.TestBase;
 
 public class LaptopsAndNotebooksTest extends TestBase {
-
-    public void setupTest(){
-        selectBrowser(baseUrl);
-    }
 
     /*
     2. Test name verifyThatUserPlaceOrderSuccessfully()
