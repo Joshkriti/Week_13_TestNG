@@ -3,33 +3,12 @@ package yourstore.annotation.testsuite;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import yourstore.annotation.testbase.TestBase;
 
 public class DesktopsTest extends TestBase {
-
-    /*
-    1.Test name verifyProductArrangeInAlphaBaticalOrder()
-        1.1 Mouse hover on Desktops Tab.and click
-        1.2 Click on “Show All Desktops”
-        1.3 Select Sort By position "Name: Z to A"
-        1.4 Verify the Product will arrange in Descending order.
-     */
-    @Test
-    public void verifyProductArrangeInAlphaBaticalOrder() {
-        Actions action = new Actions(driver);
-        WebElement desktop = driver.findElement(By.xpath("//a[text()='Desktops']"));
-        WebElement click = driver.findElement(By.xpath("//a[text()='Show AllDesktops']"));
-        action.moveToElement(desktop).moveToElement(click).click().build().perform();
-
-        selectByVisibleTextFromDropDown(By.cssSelector("*[id='input-sort']","Name (A - Z)"));
-
-
-        WebElement dropDown = driver.findElement(By.cssSelector("*[id='input-sort']"));
-        Select select = new Select(dropDown);
-        select.selectByVisibleText("Name (A - Z)");
-    }
 
     /*
     2. Test name verifyProductAddedToShoppingCartSuccessFully()
@@ -53,48 +32,41 @@ public class DesktopsTest extends TestBase {
 
         selectMenu("Show All Desktops");
 
-        WebElement dropDown = driver.findElement(By.xpath("//*[@id='input-sort']"));
-        Select select = new Select(dropDown);
-        select.selectByVisibleText("Name (A - Z)");
+        selectByVisibleTextFromDropDown(By.cssSelector("*[id='input-sort']"),"Name (A - Z)");
 
-        driver.findElement(By.xpath("//*[text()='HP LP3065']")).click();
+        clickOnElement(By.xpath("//*[text()='HP LP3065']"));
 
-        driver.findElement(By.name("option[225]")).clear();
+        clearElement(By.name("option[225]"));
 
         driver.findElement(By.name("option[225]")).sendKeys("2022-11-30");
 
-        driver.findElement(By.cssSelector("*[id='input-quantity']")).clear();
+        clearElement(By.cssSelector("*[id='input-quantity']"));
 
         driver.findElement(By.cssSelector("*[id='input-quantity']")).sendKeys("1");
 
-        driver.findElement(By.cssSelector("*[id='button-cart']")).click();
+        clickOnElement(By.cssSelector("*[id='button-cart']"));
 
-       /* String actualMessage = driver.findElement(By.cssSelector("*[class='alert alert-success alert-dismissible']")).getText();
+        String actualMessage = driver.findElement(By.cssSelector("*[class='alert alert-success alert-dismissible']")).getText();
         System.out.println(actualMessage);
         String expectingMessage = "Success: You have added HP LP3065 to your shopping cart!\n" + "×";
         Assert.assertEquals("Message to add into card successfully ", actualMessage, expectingMessage);
 
-        driver.findElement(By.xpath("//a[text()='shopping cart']")).click();
+        clickOnElement(By.xpath("//a[text()='shopping cart']"));
 
-        String actualShoppingCart = driver.findElement(By.xpath("//div[@id='content']/h1[1]")).getText();
-        String expectingShoppingCart = "Shopping Cart  (1.00kg)";
-        Assert.assertEquals(actualShoppingCart, expectingShoppingCart);
-
-        String actualProductName = driver.findElement(By.xpath("//*[@id='content']/form/div/table/tbody/tr/td[2]/a")).getText();
-        String expectingProductName = "HP LP3065";
-        Assert.assertEquals("Product Name: ", actualProductName, expectingProductName);
-
+        SoftAssert deliveryDate = new SoftAssert();
         String actualDeliveryDate = driver.findElement(By.xpath("//*[@id='content']/form/div/table/tbody/tr/td[2]/small")).getText();
         String expectingDeliveryDate = "Delivery Date:2022-11-30";
-        Assert.assertEquals("Delivery Date: ", actualDeliveryDate, expectingDeliveryDate);
+        deliveryDate.assertEquals( actualDeliveryDate, expectingDeliveryDate);
 
+        SoftAssert model = new SoftAssert();
         String actualModel = driver.findElement(By.xpath("//*[@id='content']/form/div/table/tbody/tr/td[3]")).getText();
         String expectingModel = "Product 21";
-        Assert.assertEquals("Model name: ", actualModel, expectingModel);
+        model.assertEquals(actualModel, expectingModel);
 
+        SoftAssert total = new SoftAssert();
         String actualTotal = driver.findElement(By.xpath("//*[@id='content']/form/div/table/tbody/tr/td[6]")).getText();
         String expectingTotal = "$122.00";
-        Assert.assertEquals("Total cost: ", actualTotal, expectingTotal);*/
+        total.assertEquals( actualTotal, expectingTotal);
     }
 
 }

@@ -18,13 +18,51 @@ public class Utility extends ManageDriver {
         WebElement loginLink = driver.findElement(by);
         loginLink.click();
     }
+
+    public void clearElement(By by){
+        WebElement clearLink = driver.findElement(by);
+        clearLink.clear();
+    }
     public void selectMenu(String menu) {
         driver.findElement(By.xpath("//a[text()='Show AllDesktops']")).getText();
         driver.findElement(By.xpath("//a[text()='Show AllLaptops & Notebooks']")).getText();
         driver.findElement(By.xpath("//a[text()='Show AllComponents']")).getText();
     }
+    public void selectMyAccountRegister(String option) {
+        WebElement dropDown = driver.findElement(By.xpath("//a[@title='My Account']/span[1]"));
+        dropDown.click();
+        List<WebElement> optionsAccount = driver.findElements(By.xpath("//*[@id='top-links']/ul/li[2]/ul/li[1]/a"));
+        for (WebElement options : optionsAccount) {
+            if (options.getText().equalsIgnoreCase("Register")) {
+                System.out.println(options.getText());
+                options.click();
+            }
+        }
+    }
 
+    public void selectMyAccountLogin(String option) {
+        WebElement dropDown1 = driver.findElement(By.xpath("//a[@title='My Account']/span[1]"));
+        dropDown1.click();
+        List<WebElement> optionsAccount1 = driver.findElements(By.xpath("//*[@id='top-links']/ul/li[2]/ul/li[2]/a"));
+        for (WebElement options1 : optionsAccount1) {
+            if (options1.getText().equalsIgnoreCase("Login")) {
+                System.out.println(options1.getText());
+                options1.click();
+            }
+        }
+    }
 
+    public void selectMyAccountLogout(String option) {
+        WebElement dropdown2 = driver.findElement(By.xpath("//a[@title='My Account']/span[1]"));
+        dropdown2.click();
+        List<WebElement> logoutOption = driver.findElements(By.xpath("//*[@class='dropdown-menu dropdown-menu-right']/li[5]/a"));
+        for (WebElement logout : logoutOption) {
+            if (logout.getText().equalsIgnoreCase("Logout")) {
+                System.out.println(logout.getText());
+                logout.click();
+            }
+        }
+    }
     public void selectByVisibleTextFromDropDown(By by, String text) {
         WebElement dropDown = driver.findElement(by);
         Select select = new Select(dropDown);
