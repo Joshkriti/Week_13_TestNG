@@ -18,6 +18,11 @@ public class Utility extends ManageDriver {
         WebElement loginLink = driver.findElement(by);
         loginLink.click();
     }
+    public void selectMenu(String menu) {
+        driver.findElement(By.xpath("//a[text()='Show AllDesktops']")).getText();
+        driver.findElement(By.xpath("//a[text()='Show AllLaptops & Notebooks']")).getText();
+        driver.findElement(By.xpath("//a[text()='Show AllComponents']")).getText();
+    }
 
 
     public void selectByVisibleTextFromDropDown(By by, String text) {

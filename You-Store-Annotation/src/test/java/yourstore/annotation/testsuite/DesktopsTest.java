@@ -5,8 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
+import yourstore.annotation.testbase.TestBase;
 
-public class DesktopsTest extends TopMenuTest {
+public class DesktopsTest extends TestBase {
 
     /*
     1.Test name verifyProductArrangeInAlphaBaticalOrder()
@@ -21,6 +22,8 @@ public class DesktopsTest extends TopMenuTest {
         WebElement desktop = driver.findElement(By.xpath("//a[text()='Desktops']"));
         WebElement click = driver.findElement(By.xpath("//a[text()='Show AllDesktops']"));
         action.moveToElement(desktop).moveToElement(click).click().build().perform();
+
+        selectByVisibleTextFromDropDown(By.cssSelector("*[id='input-sort']","Name (A - Z)"));
 
 
         WebElement dropDown = driver.findElement(By.cssSelector("*[id='input-sort']"));

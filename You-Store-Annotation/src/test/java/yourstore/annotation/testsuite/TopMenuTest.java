@@ -8,11 +8,7 @@ import org.testng.asserts.SoftAssert;
 import yourstore.annotation.testbase.TestBase;
 
 public class TopMenuTest extends TestBase {
-    public void selectMenu(String menu) {
-        driver.findElement(By.xpath("//a[text()='Show AllDesktops']")).getText();
-        driver.findElement(By.xpath("//a[text()='Show AllLaptops & Notebooks']")).getText();
-        driver.findElement(By.xpath("//a[text()='Show AllComponents']")).getText();
-    }
+
 
 
     /*
