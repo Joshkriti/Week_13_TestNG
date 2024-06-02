@@ -1,12 +1,13 @@
 package uk.co.library.testsuite;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-import uk.co.library.testbase.TestBase;
+import uk.co.library.pagespackage.HomePage;
 
-public class JobSearchTest extends TestBase {
-    @Test
+public class JobSearchTest extends DataSet {
+
+
+    @Test (dataProvider = "jobSearchData", dataProviderClass = JobSearchTest.class)
     public void verifyJobSearchResultUsingDifferentDataSet(
             String jobTitle,
             String location,
@@ -16,22 +17,30 @@ public class JobSearchTest extends TestBase {
             String salaryType,
             String jobType,
             String result) {
-        clickOnElement(By.xpath("//input[@class='form__input']"));
-        WebElement jobTitle1 = driver.findElement(By.xpath("//input[@class='form__input']"));
-        jobTitle1.sendKeys(jobTitle);
+
+        HomePage homepage = new HomePage(driver);
+
+        driver.switchTo().frame("gdpr-consent-notice");
+        driver.findElement(By.xpath("//*[text()='Accept All']")).click();
+        driver.switchTo().defaultContent();
+
+        homepage.enterJobTitle(jobTitle);
+        homepage.enterLocation(location);
+        homepage.selectDistance(distance);
+        homepage.clickMoreSearchOptions();
+        homepage.enterSalaryMin(salaryMin);
+        homepage.enterSalaryMax(salaryMax);
+        homepage.selectSalaryType(salaryType);
+        homepage.selectJobType(jobType);
+        homepage.clickFindJobsButton();
+
 
     }
 
-    public void jobTitle(String jobTitle) {
-        clickOnElement(By.xpath("//input[@class='form__input']"));
+
+
     }
 
-    @Test
-    public void verifyJobSearchResult() {
-      /*  jobTitle("Tester");
-        driver.findElement(By.xpath("//input[@class='form__input']")).sendKeys("Tester");*/
-    }
-}
 
 
 
