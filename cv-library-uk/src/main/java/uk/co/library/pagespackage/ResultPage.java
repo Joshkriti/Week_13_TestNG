@@ -13,12 +13,11 @@ public class ResultPage extends HomePage {
 
     }
 
-    public void verifyTheResults(){
-        String MyString = "Permanent Designer jobs in Harrow";
-        String[] arrOfString = MyString.split("Permanet",6);
+    public void verifyTheResults() {
+        // String MyString = "Permanent Designer jobs in Harrow";
+        //  String[] arrOfString = MyString.split("Permanet", 6);
 
 
+            }
 
-
-    }
 }

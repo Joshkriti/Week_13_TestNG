@@ -7,8 +7,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class PagesPackage extends ManageDriver {
     public void clickStartNow(By by) {
-        WebElement loginLink = driver.findElement(by);
-        loginLink.click();
+        WebElement clickStart= driver.findElement(by);
+        clickStart.click();
     }
 
     public void selectJobType(By by) {

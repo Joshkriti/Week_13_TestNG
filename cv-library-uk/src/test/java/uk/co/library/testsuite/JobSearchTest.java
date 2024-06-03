@@ -1,13 +1,14 @@
 package uk.co.library.testsuite;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import uk.co.library.pagespackage.HomePage;
 
 public class JobSearchTest extends DataSet {
 
 
-    @Test (dataProvider = "jobSearchData", dataProviderClass = JobSearchTest.class)
+    @Test(dataProvider = "jobSearchData", dataProviderClass = JobSearchTest.class)
     public void verifyJobSearchResultUsingDifferentDataSet(
             String jobTitle,
             String location,
@@ -34,12 +35,16 @@ public class JobSearchTest extends DataSet {
         homepage.selectJobType(jobType);
         homepage.clickFindJobsButton();
 
+        String actual = homepage.getResultText();
+        Assert.assertTrue(actual.contains(result),"expected result: " + result + "but got: " + actual);
 
+
+
+       /* String actualResult = homepage.getResultText();
+        Assert.assertTrue(true);
+        actualResult.contains(result);*/
     }
-
-
-
-    }
+}
 
 
 
