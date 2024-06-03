@@ -1,11 +1,13 @@
 package gov.uk.check.visa.testsuite;
 
+import gov.uk.check.visa.pagespackage.PagesPackage;
 import gov.uk.check.visa.testbase.TestBase;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class VisaConfirmationTest extends TestBase {
+    PagesPackage aPackage = new PagesPackage();
     /*
     1.anAustralianCominToUKForTourism().
         Click on start button
@@ -15,17 +17,18 @@ public class VisaConfirmationTest extends TestBase {
         Click on Continue button
         verify result 'You will not need a visa to come to the UK'
      */
-    @Test (priority = 1)
+    @Test (groups = {" sanity "})
     public void anAustralianComingToUKForTourism(){
-        clickOnElement(By.xpath("//*[@class='gem-c-button govuk-button govuk-button--start']"));
+        aPackage.clickStartNow(By.xpath("//*[@class='gem-c-button govuk-button govuk-button--start']"));
+        //clickOnElement(By.xpath("//*[@class='gem-c-button govuk-button govuk-button--start']"));
 
-        selectByVisibleTextFromDropDown(By.className("govuk-select"), "Australia");
+        aPackage.selectNationality(By.className("govuk-select"), "Australia");
 
-        clickOnElement(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
+        aPackage.clickNextStepButton(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
 
-        clickOnElement(By.xpath("//*[@class='govuk-radios']/div/input[1]"));
+        aPackage.selectReasonForVisit(By.xpath("//*[@class='govuk-radios']/div/input[1]"));
 
-        clickOnElement(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
+        aPackage.clickNextStepButton(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
 
         SoftAssert verify = new SoftAssert();
         String actualOutcome = driver.findElement(By.xpath("//*[@class='govuk-!-margin-bottom-6']/h2")).getText();
@@ -46,25 +49,25 @@ public class VisaConfirmationTest extends TestBase {
         verify result 'You need a visa to work in health and care'
      */
 
-    @Test (priority = 2)
+    @Test (groups = {" smoke "})
     public void aChileanComingToTheUKForWorkAndPlansOnStayingForLongerThanSixMonths(){
-        clickOnElement(By.xpath("//*[@class='gem-c-button govuk-button govuk-button--start']"));
+        aPackage.clickStartNow(By.xpath("//*[@class='gem-c-button govuk-button govuk-button--start']"));
 
-        selectByVisibleTextFromDropDown(By.className("govuk-select"), "Chile");
+        aPackage.selectNationality(By.className("govuk-select"), "Chile");
 
-        clickOnElement(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
+        aPackage.clickNextStepButton(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
 
-        clickOnElement(By.xpath("//*[@class='govuk-radios']/div[2]/input[1]"));
+        aPackage.selectJobType(By.xpath("//*[@class='govuk-radios']/div[2]/input[1]"));
 
-        clickOnElement(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
+        aPackage.clickNextStepButton(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
 
-        clickOnElement(By.xpath("//*[@class='govuk-radios']/div[2]/input"));
+        aPackage.selectLengthOfStay(By.xpath("//*[@class='govuk-radios']/div[2]/input"));
 
-        clickOnElement(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
+        aPackage.clickNextStepButton(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
 
-        clickOnElement(By.xpath("//*[@class='govuk-radios']/div/input"));
+        aPackage.selectJobType(By.xpath("//*[@class='govuk-radios']/div/input"));
 
-        clickOnElement(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
+        aPackage.clickNextStepButton(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
 
         SoftAssert verifyText = new SoftAssert();
         String actualText = driver.findElement(By.xpath("//*[@class='govuk-!-margin-bottom-6']/h2")).getText();
@@ -82,17 +85,17 @@ public class VisaConfirmationTest extends TestBase {
         Click on Continue button
         verify result 'You’ll need a visa to join your family or partner in the UK'
      */
-    @Test (priority = 3)
+    @Test (groups = {" regression "})
     public void aColumbianNationalComingToTheUKToJoinAPartnerForALongStayTheyDoHaveAnArticle10Or20Card(){
-        clickOnElement(By.xpath("//*[@class='gem-c-button govuk-button govuk-button--start']"));
+        aPackage.clickStartNow(By.xpath("//*[@class='gem-c-button govuk-button govuk-button--start']"));
 
-        selectByVisibleTextFromDropDown(By.className("govuk-select"), "Colombia");
+        aPackage.selectNationality(By.className("govuk-select"), "Colombia");
 
-        clickOnElement(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
+        aPackage.selectReasonForVisit(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
 
         clickOnElement(By.xpath("//*[@class='govuk-radios']/div[5]/input"));
 
-        clickOnElement(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
+        aPackage.clickNextStepButton(By.xpath("//*[@class='gem-c-button govuk-button gem-c-button--bottom-margin']"));
 
 
 
