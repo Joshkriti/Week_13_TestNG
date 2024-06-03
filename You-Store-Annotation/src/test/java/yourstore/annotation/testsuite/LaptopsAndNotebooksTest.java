@@ -46,7 +46,7 @@ public class LaptopsAndNotebooksTest extends TestBase {
         WebElement click = driver.findElement(By.xpath("//a[text()='Show AllLaptops & Notebooks']"));
         action.moveToElement(laptopAndNotebooks).moveToElement(click).click().build().perform();
 
-        selectByContainsTextFromDropDown(By.xpath("//*[@class='form-control']"),"Price (High > Low)");
+        selectByVisibleTextFromDropDown(By.xpath("//*[@class='form-control']"),"Price (High > Low)");
 
         clickOnElement(By.linkText("MacBook"));
 

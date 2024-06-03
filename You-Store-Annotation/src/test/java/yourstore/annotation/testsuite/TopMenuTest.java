@@ -17,7 +17,7 @@ public class TopMenuTest extends TestBase {
         1.2 call selectMenu method and pass the menu = “Show All Desktops”
         1.3 Verify the text ‘Desktops’
      */
-    @Test (priority = 1)
+    @Test (groups = {"smoke","sanity"})
     public void verifyUserShouldNavigateToDesktopsPageSuccessfully(){
 
         Actions action = new Actions(driver);
@@ -38,7 +38,7 @@ public class TopMenuTest extends TestBase {
         2.2 call selectMenu method and pass the menu = “Show All Laptops & Notebooks”
         2.3 Verify the text ‘Laptops & Notebooks’
      */
-    @Test (priority = 2)
+    @Test (groups = {"regression"})
     public void verifyUserShouldNavigateToLaptopsAndNotebooksPageSuccessfully(){
         Actions action = new Actions(driver);
         WebElement laptopAndNotebooks = driver.findElement(By.xpath("//a[text()='Laptops & Notebooks']"));
@@ -58,7 +58,7 @@ public class TopMenuTest extends TestBase {
         3.2 call selectMenu method and pass the menu = “Show All Components”
         3.3 Verify the text ‘Components’
      */
-    @Test (priority = 3)
+    @Test (groups = {"regression","smoke"})
     public void verifyUserShouldNavigateToComponentsPageSuccessfully(){
         Actions action = new Actions(driver);
         WebElement components = driver.findElement(By.xpath("//a[text()='Components']"));
