@@ -17,8 +17,13 @@ public class VisaConfirmationTest extends TestBase {
         Click on Continue button
         verify result 'You will not need a visa to come to the UK'
      */
-    @Test (groups = {" sanity "})
+
+
+    @Test (groups = {"sanity", "smoke", "regression"})
+
     public void anAustralianComingToUKForTourism(){
+        clickOnElement(By.xpath("//*[text()='Accept additional cookies']"));
+
         aPackage.clickStartNow(By.xpath("//*[@class='gem-c-button govuk-button govuk-button--start']"));
         //clickOnElement(By.xpath("//*[@class='gem-c-button govuk-button govuk-button--start']"));
 
@@ -49,8 +54,10 @@ public class VisaConfirmationTest extends TestBase {
         verify result 'You need a visa to work in health and care'
      */
 
-    @Test (groups = {" smoke "})
+    @Test (groups = {"smoke"})
     public void aChileanComingToTheUKForWorkAndPlansOnStayingForLongerThanSixMonths(){
+        clickOnElement(By.xpath("//*[text()='Accept additional cookies']"));
+
         aPackage.clickStartNow(By.xpath("//*[@class='gem-c-button govuk-button govuk-button--start']"));
 
         aPackage.selectNationality(By.className("govuk-select"), "Chile");
@@ -85,8 +92,10 @@ public class VisaConfirmationTest extends TestBase {
         Click on Continue button
         verify result 'You’ll need a visa to join your family or partner in the UK'
      */
-    @Test (groups = {" regression "})
+    @Test (groups = {"regression", "smoke"})
     public void aColumbianNationalComingToTheUKToJoinAPartnerForALongStayTheyDoHaveAnArticle10Or20Card(){
+        clickOnElement(By.xpath("//*[text()='Accept additional cookies']"));
+
         aPackage.clickStartNow(By.xpath("//*[@class='gem-c-button govuk-button govuk-button--start']"));
 
         aPackage.selectNationality(By.className("govuk-select"), "Colombia");
