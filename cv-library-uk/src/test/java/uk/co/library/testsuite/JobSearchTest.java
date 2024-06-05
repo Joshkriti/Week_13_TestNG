@@ -7,7 +7,6 @@ import uk.co.library.pagespackage.HomePage;
 
 public class JobSearchTest extends DataSet {
 
-
     @Test(dataProvider = "jobSearchData", dataProviderClass = JobSearchTest.class)
     public void verifyJobSearchResultUsingDifferentDataSet(
             String jobTitle,
